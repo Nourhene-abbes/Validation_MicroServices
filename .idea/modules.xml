@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/order-service/order-service.iml" filepath="$PROJECT_DIR$/order-service/order-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/basket-service/wishlist-service.iml" filepath="$PROJECT_DIR$/basket-service/wishlist-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wishlist-service/wishlist-service (1).iml" filepath="$PROJECT_DIR$/wishlist-service/wishlist-service (1).iml" />
     </modules>
   </component>
 </project>
