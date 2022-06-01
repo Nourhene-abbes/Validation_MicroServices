@@ -1,4 +1,4 @@
-package tn.esprit.wishlistservice.model;
+package tn.esprit.userservice.model;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;
