@@ -1,4 +1,4 @@
-package tn.esprit.wishlistservice.model;
+package tn.esprit.basketservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
