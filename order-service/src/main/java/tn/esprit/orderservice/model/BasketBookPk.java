@@ -1,4 +1,4 @@
-package tn.esprit.wishlistservice.model;
+package tn.esprit.orderservice.model;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
