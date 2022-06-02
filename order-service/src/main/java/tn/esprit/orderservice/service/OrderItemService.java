@@ -1,7 +1,7 @@
-package tn.esprit.BookStore.service;
+package tn.esprit.orderservice.service;
 
-import tn.esprit.BookStore.model.Book;
-import tn.esprit.BookStore.model.OrderItem;
+import tn.esprit.orderservice.model.Book;
+import tn.esprit.orderservice.model.OrderItem;
 
 import java.util.List;
 

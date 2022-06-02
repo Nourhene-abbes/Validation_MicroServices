@@ -1,11 +1,11 @@
-package tn.esprit.BookStore.repository;
+package tn.esprit.orderservice.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import tn.esprit.BookStore.model.Book;
-import tn.esprit.BookStore.model.OrderItem;
+import tn.esprit.orderservice.model.Book;
+import tn.esprit.orderservice.model.OrderItem;
 
 import java.util.List;
 

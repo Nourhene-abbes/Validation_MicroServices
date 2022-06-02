@@ -2,7 +2,7 @@ package tn.esprit.orderservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-@EnableEurekaServer
+@EnableEurekaClient
 @SpringBootApplication
 public class OrderServiceApplication {
 

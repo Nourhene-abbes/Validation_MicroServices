@@ -1,8 +1,8 @@
-package tn.esprit.BookStore.service;
+package tn.esprit.orderservice.service;
 
-import tn.esprit.BookStore.model.Category;
-import tn.esprit.BookStore.model.Order;
-import tn.esprit.BookStore.model.User;
+import tn.esprit.orderservice.model.Category;
+import tn.esprit.orderservice.model.Order;
+import tn.esprit.orderservice.model.User;
 
 import java.util.List;
 import java.util.Map;

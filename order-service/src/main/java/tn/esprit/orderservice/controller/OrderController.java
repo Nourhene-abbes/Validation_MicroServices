@@ -1,11 +1,11 @@
-package tn.esprit.BookStore.controller;
+package tn.esprit.orderservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.BookStore.model.Order;
-import tn.esprit.BookStore.model.Response;
-import tn.esprit.BookStore.service.OrderService;
+import tn.esprit.orderservice.model.Order;
+import tn.esprit.orderservice.model.Response;
+import tn.esprit.orderservice.service.OrderService;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package tn.esprit.BookStore.controller;
+package tn.esprit.orderservice.controller;
 
 import com.stripe.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import tn.esprit.BookStore.model.Response;
-import tn.esprit.BookStore.service.PaymentService;
+import tn.esprit.orderservice.model.Response;
+import tn.esprit.orderservice.service.PaymentService;
 
 @RestController
 @RequestMapping("api/payment")
