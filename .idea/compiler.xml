@@ -2,18 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="category-service" />
-        <module name="book-service" />
-        <module name="user-service" />
-        <module name="basket-service" />
-        <module name="wishlist-service" />
         <module name="discovery-server" />
+        <module name="book-service" />
         <module name="online-book-service" />
+        <module name="basket-service" />
         <module name="order-service" />
+        <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,14 +24,6 @@
       <module name="online-book-service" target="11" />
       <module name="order-service" target="11" />
       <module name="user-service" target="11" />
-      <module name="wishlist-service" target="11" />
-      <module name="wishlist-service (1)" target="11" />
-      <module name="wishlist-service (2)" target="11" />
-      <module name="wishlist-service (3)" target="11" />
-      <module name="wishlist-service (4)" target="11" />
-      <module name="wishlist-service (5)" target="11" />
-      <module name="wishlist-service (6)" target="11" />
-      <module name="wishlist-service (7)" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -43,14 +35,6 @@
       <module name="online-book-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
-      <module name="wishlist-service" options="-parameters" />
-      <module name="wishlist-service (1)" options="-parameters" />
-      <module name="wishlist-service (2)" options="-parameters" />
-      <module name="wishlist-service (3)" options="-parameters" />
-      <module name="wishlist-service (4)" options="-parameters" />
-      <module name="wishlist-service (5)" options="-parameters" />
-      <module name="wishlist-service (6)" options="-parameters" />
-      <module name="wishlist-service (7)" options="-parameters" />
     </option>
   </component>
 </project>

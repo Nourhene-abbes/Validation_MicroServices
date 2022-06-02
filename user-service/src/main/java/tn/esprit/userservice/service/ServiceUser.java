@@ -158,9 +158,9 @@ public class ServiceUser implements IUserService{
 
     @Override
     public void mailling(String mail,String message) {
-        final String username = "*************";
-        final String password = "**********";
-        String fromEmail = "nourabes12@gmail.com";
+        final String username = "nourhene.abbes@esprit.tn";
+        final String password = "lemtswrurzsowvoc";
+        String fromEmail = "nourhene.abbes@esprit.tn";
         Properties properties = new Properties();
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
@@ -188,14 +188,15 @@ public class ServiceUser implements IUserService{
             e.printStackTrace();
         }
     }
-    @Override
+    @SuppressWarnings("unused")
+	@Override
     public void sendsms(String str,int body) {
-        Twilio.init("********************", "*******************");
+        Twilio.init("ACc84c5a207336b46ee6d4f2bc6954b86a", "d983c46f68a2f6a7e27a5f6cca9df235");
         try {
-            com.twilio.rest.api.v2010.account.Message message = com.twilio.rest.api.v2010.account.Message.creator(
+        	 com.twilio.rest.api.v2010.account.Message message = com.twilio.rest.api.v2010.account.Message.creator(
                     new PhoneNumber("+216"+str), // To number
-                    new PhoneNumber("+*************"), // From number
-                    "Verification code to reset password is :"+body
+                    new PhoneNumber("+19378065252"), // From number
+                    "Verification code to reset password is :"+ body
             ).create();
         }catch (Exception e) {
             // TODO: handle exception

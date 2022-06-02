@@ -1,10 +1,14 @@
 package tn.esprit.userservice.utils;
 
 import java.io.Serializable;
+import java.security.Key;
+import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +17,8 @@ import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtTokenUtil implements Serializable {
@@ -21,7 +27,7 @@ public class JwtTokenUtil implements Serializable {
 
     public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
 
-    @Value("${jwt.secret}")
+    @Value("${security.jwt.token.secret-key:secret}")
     private String secret;
 
     //retrieve username from jwt token
@@ -29,6 +35,11 @@ public class JwtTokenUtil implements Serializable {
         return getClaimFromToken(token, Claims::getSubject);
     }
 
+//    @PostConstruct
+//    protected void init() {
+//    secret = Base64.getEncoder().encodeToString(secret.getBytes());
+//    }
+    
     //retrieve expiration date from jwt token
     public Date getExpirationDateFromToken(String token) {
         return getClaimFromToken(token, Claims::getExpiration);
@@ -39,7 +50,8 @@ public class JwtTokenUtil implements Serializable {
         return claimsResolver.apply(claims);
     }
     //for retrieveing any information from token we will need the secret key
-    private Claims getAllClaimsFromToken(String token) {
+    @SuppressWarnings("deprecation")
+	private Claims getAllClaimsFromToken(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
 
@@ -60,11 +72,27 @@ public class JwtTokenUtil implements Serializable {
     //2. Sign the JWT using the HS512 algorithm and secret key.
     //3. According to JWS Compact Serialization(https://tools.ietf.org/html/draft-ietf-jose-json-web-signature-41#section-3.1)
     //   compaction of the JWT to a URL-safe string
-    private String doGenerateToken(Map<String, Object> claims, String subject) {
+    private Key getSigningKey() {
+		  return Keys.secretKeyFor(SignatureAlgorithm.HS256);
+		}
+    @SuppressWarnings("deprecation")
+	private String doGenerateToken(Map<String, Object> claims, String subject) {
 
-        return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
-                .signWith(SignatureAlgorithm.HS512, secret).compact();
+//        return Jwts.builder().setClaims(claims).setIssuedAt(new Date(System.currentTimeMillis()))
+//                .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 100))
+//                .signWith(SignatureAlgorithm.HS256, secret).compact();
+    	
+        return Jwts.builder()//
+
+        .setClaims(claims)//
+        .setSubject(subject)
+        .setIssuedAt(new Date(System.currentTimeMillis()))//
+
+        .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 100))//
+
+        .signWith(getSigningKey())//
+
+        .compact();
     }
 
     //validate token
