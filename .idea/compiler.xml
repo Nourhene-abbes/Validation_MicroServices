@@ -7,13 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="category-service" />
+
+
         <module name="discovery-server" />
         <module name="book-service" />
         <module name="online-book-service" />
         <module name="basket-service" />
         <module name="order-service" />
         <module name="user-service" />
+
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

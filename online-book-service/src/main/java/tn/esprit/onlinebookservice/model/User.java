@@ -1,4 +1,4 @@
-package tn.esprit.wishlistservice.model;
+package tn.esprit.onlinebookservice.model;
 
 import java.util.Set;
 import java.io.Serializable;
