@@ -7,15 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="online-book-service-service" />
+        <module name="discovery-server" />
         <module name="category-service" />
         <module name="discovery-server" />
         <module name="book-service" />
         <module name="online-book-service" />
-        <module name="user-service" />
         <module name="basket-service" />
         <module name="order-service" />
+        <module name="user-service" />
         <module name="wishlist-service" />
-        <module name="wishlist-service (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +25,7 @@
       <module name="category-service" target="11" />
       <module name="discovery-server" target="11" />
       <module name="online-book-service" target="11" />
+      <module name="online-book-service-service" target="11" />
       <module name="order-service" target="11" />
       <module name="user-service" target="11" />
       <module name="wishlist-service" target="11" />
@@ -43,6 +45,7 @@
       <module name="category-service" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="online-book-service" options="-parameters" />
+      <module name="online-book-service-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="wishlist-service" options="-parameters" />
