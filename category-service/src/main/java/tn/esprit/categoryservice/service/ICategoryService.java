@@ -1,6 +1,5 @@
 package tn.esprit.categoryservice.service;
 
-
 import java.util.List;
 
 public interface ICategoryService<T> {
