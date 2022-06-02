@@ -5,4 +5,5 @@ BookStore project (Microservice Version) developed by :
 -> Nourhene Abbes  <br />
 -> Maha Bacha  <br />
 -> Malek Kouissi  <br />
--> Hamza Bouchareb
+-> Hamza Bouchareb  <br />
+-> Mohamed Mehdi Charni

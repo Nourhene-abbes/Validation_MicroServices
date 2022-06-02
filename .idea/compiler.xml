@@ -2,18 +2,15 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="category-service" />
-        <module name="book-service" />
-        <module name="user-service" />
-        <module name="basket-service" />
-        <module name="wishlist-service" />
         <module name="discovery-server" />
         <module name="online-book-service" />
-        <module name="order-service" />
+        <module name="basket-service" />
+        <module name="wishlist-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

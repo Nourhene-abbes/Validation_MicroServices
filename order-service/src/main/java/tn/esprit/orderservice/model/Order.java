@@ -1,5 +1,4 @@
-package tn.esprit.wishlistservice.model;
-
+package tn.esprit.orderservice.model;
 import lombok.*;
 
 import javax.persistence.*;
