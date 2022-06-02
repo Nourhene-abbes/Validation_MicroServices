@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.esprit</groupId>
-	<artifactId>wishlist-service</artifactId>
+	<artifactId>online-book-service-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>wishlist-service</name>
+	<name>online-book-service-service</name>
 	<description>Microservice Spring boot BookStore</description>
 
 	<properties>

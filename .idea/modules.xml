@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/category-service/category-service.iml" filepath="$PROJECT_DIR$/category-service/category-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/online-book-service/online-book-service.iml" filepath="$PROJECT_DIR$/online-book-service/online-book-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/online-book-service/online-book-service-service.iml" filepath="$PROJECT_DIR$/online-book-service/online-book-service-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-service/order-service.iml" filepath="$PROJECT_DIR$/order-service/order-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/basket-service/wishlist-service.iml" filepath="$PROJECT_DIR$/basket-service/wishlist-service.iml" />
