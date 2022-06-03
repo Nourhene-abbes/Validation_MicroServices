@@ -1,13 +1,25 @@
 package tn.esprit.bookservice.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
-
-import javax.persistence.*;
-
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 @Getter
 @Setter
 @AllArgsConstructor
@@ -179,6 +191,11 @@ public class Book {
 
 	public Book() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Book(String string, int i, String string2, String string3, Date date, int j, String string4, String string5,
+			String string6, int k, String string7, boolean b) {
 		// TODO Auto-generated constructor stub
 	}
 
