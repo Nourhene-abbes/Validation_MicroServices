@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c94dac19-4868-4a54-958b-12981b3593fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/zull-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/main/java/com/esprit/getway/communication/GetwayServerApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/main/java/com/esprit/getway/communication/ServletInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/main/java/com/esprit/getway/filters/ErrorFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/main/java/com/esprit/getway/filters/PostFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/main/java/com/esprit/getway/filters/PreFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/main/java/com/esprit/getway/filters/RouteFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/bin/src/test/java/com/esprit/getway/communication/GetwayServerApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/main/java/com/esprit/getway/communication/GetwayServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/main/java/com/esprit/getway/communication/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/main/java/com/esprit/getway/filters/ErrorFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/main/java/com/esprit/getway/filters/PostFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/main/java/com/esprit/getway/filters/PreFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/main/java/com/esprit/getway/filters/RouteFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zull-gateway/src/test/java/com/esprit/getway/communication/GetwayServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +77,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/zull-gateway/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -66,7 +93,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
+  <component name="RunManager" selected="Spring Boot.GetwayServerApplication">
     <configuration name="DiscoveryServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -121,11 +148,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GetwayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuulServer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.esprit.getway.communication.GetwayServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication (1)" />
       <item itemvalue="Spring Boot.BookServiceApplication" />
+      <item itemvalue="Spring Boot.GetwayServerApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -156,7 +191,7 @@
       <workItem from="1654208642963" duration="686000" />
       <workItem from="1654209346487" duration="123000" />
       <workItem from="1654209493227" duration="372000" />
-      <workItem from="1654210876495" duration="4342000" />
+      <workItem from="1654210876495" duration="6563000" />
     </task>
     <servers />
   </component>

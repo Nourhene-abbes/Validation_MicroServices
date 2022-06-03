@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/online-book-service/online-book-service.iml" filepath="$PROJECT_DIR$/online-book-service/online-book-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/basket-service/wishlist-service.iml" filepath="$PROJECT_DIR$/basket-service/wishlist-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zull-gateway/zuulServer.iml" filepath="$PROJECT_DIR$/zull-gateway/zuulServer.iml" />
     </modules>
   </component>
 </project>
