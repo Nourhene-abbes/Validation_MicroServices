@@ -7,6 +7,7 @@ import tn.esprit.categoryservice.repository.CategoryRepository;
 
 import java.util.List;
 
+
 @Service
 public class CategoryService implements ICategoryService<Category>{
 
@@ -17,7 +18,7 @@ public class CategoryService implements ICategoryService<Category>{
     public List<Category> findAll() {
         return categoryRepository.findAll();
     }
-    
+
     @Override
     public Category findByName(String name) {
         return categoryRepository.findByName(name);
@@ -30,9 +31,9 @@ public class CategoryService implements ICategoryService<Category>{
 
     @Override
     public Category update(Category category) {
-        Category category1 = categoryRepository.findById(category.getId()).get();
-        category1.setName(category.getName());
-        return categoryRepository.save(category1);
+        Category tmp = categoryRepository.findById(category.getId()).get();
+        tmp.setName(category.getName());
+        return categoryRepository.save(tmp);
     }
 
 
