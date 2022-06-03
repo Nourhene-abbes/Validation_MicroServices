@@ -20,16 +20,24 @@ import javax.mail.internet.MimeMultipart;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.twilio.Twilio;
 import com.twilio.type.PhoneNumber;
 
+import exceptions.CustomException;
 import tn.esprit.userservice.model.User;
 import tn.esprit.userservice.model.Verification_Code;
 import tn.esprit.userservice.repository.UserRepository;
 import tn.esprit.userservice.repository.VerificationCodeRepository;
+import tn.esprit.userservice.security.JwtTokenProvider;
 
 
 @Service
@@ -42,12 +50,47 @@ public class ServiceUser implements IUserService{
     public static int  idverif=0;
 
     private static final Logger L=LogManager.getLogger(ServiceUser.class);
+    
+    
     @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private PasswordEncoder passwordEncoder;
+
+  
+
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+    
+
+    
+    public String signin(String username, String password) {
+
+    	System.out.println("we are in the login service please work");
+
+    	System.out.println(username);
+
+    	System.out.println(password);
+
+    	try {
+
+    	authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+
+    	return jwtTokenProvider.createToken(username);
+
+    	} catch (AuthenticationException e) {
+
+    	throw new CustomException("Invalid username/password supplied", HttpStatus.UNPROCESSABLE_ENTITY);
+
+    	}
+    	}
+    
+    
     @Override
     public User Authority(String login, String password)  {
         User logged= UserRepo.Auth(login);
-        if(bCryptPasswordEncoder.matches(password,logged.getPassword())){
+        if(passwordEncoder.matches(password,logged.getPassword())){
             return logged;
         }
 
@@ -59,8 +102,8 @@ public class ServiceUser implements IUserService{
         // TODO Auto-generated method stub
         L.info(us);
         if(UserRepo.Existmail(us.getEmail(),us.getLogin())==false) {
-            String encodedPassword = bCryptPasswordEncoder.encode(us.getPassword());
-            String verifCode = bCryptPasswordEncoder.encode(us.getFull_name());
+            String encodedPassword = passwordEncoder.encode(us.getPassword());
+            String verifCode = passwordEncoder.encode(us.getFull_name());
 
             us.setPassword(encodedPassword);
             User x=UserRepo.save(us);
@@ -75,8 +118,8 @@ public class ServiceUser implements IUserService{
         // TODO Auto-generated method stub
         L.info(us);
         if(UserRepo.Existmail(us.getEmail(),us.getLogin())==false) {
-            String encodedPassword = bCryptPasswordEncoder.encode(us.getPassword());
-            String verifCode = bCryptPasswordEncoder.encode(us.getFull_name());
+            String encodedPassword = passwordEncoder.encode(us.getPassword());
+            String verifCode = passwordEncoder.encode(us.getFull_name());
             us.setRole(0);
             us.setPassword(encodedPassword);
             User x=UserRepo.save(us);
@@ -99,7 +142,7 @@ public class ServiceUser implements IUserService{
     @Override
     public User Update(User us) {
         if(UserRepo.findById(us.getId())!=null) {
-            String encodedPassword = bCryptPasswordEncoder.encode(us.getPassword());
+            String encodedPassword = passwordEncoder.encode(us.getPassword());
             // TODO Auto-generated method stub
             us.setPassword(encodedPassword);
             UserRepo.save(us);
@@ -188,16 +231,19 @@ public class ServiceUser implements IUserService{
             e.printStackTrace();
         }
     }
-    @SuppressWarnings("unused")
+   
 	@Override
     public void sendsms(String str,int body) {
-        Twilio.init("ACc84c5a207336b46ee6d4f2bc6954b86a", "d983c46f68a2f6a7e27a5f6cca9df235");
+        Twilio.init("ACc84c5a207336b46ee6d4f2bc6954b86a","5584b31545869ded1498127f2d8ac2c8");
         try {
         	 com.twilio.rest.api.v2010.account.Message message = com.twilio.rest.api.v2010.account.Message.creator(
                     new PhoneNumber("+216"+str), // To number
                     new PhoneNumber("+19378065252"), // From number
                     "Verification code to reset password is :"+ body
             ).create();
+        	 
+        	 
+        	 
         }catch (Exception e) {
             // TODO: handle exception
         }
@@ -257,7 +303,7 @@ public class ServiceUser implements IUserService{
             return "User not found";
         }
         if(ServiceUser.coderest==code) {
-            t.setPassword(bCryptPasswordEncoder.encode(password));
+            t.setPassword(passwordEncoder.encode(password));
             UserRepo.save(t);
             return "Password updated successfully !";
         }
@@ -271,7 +317,7 @@ public class ServiceUser implements IUserService{
         if(isVerified(u.getLogin(),u.getPassword()))
             return "you are already verified";
 
-        else if(bCryptPasswordEncoder.matches(UserRepo.Auth(u.getLogin()).getFull_name(),verifcode) && (UserRepo.Auth(u.getLogin())!=null )) {
+        else if(passwordEncoder.matches(UserRepo.Auth(u.getLogin()).getFull_name(),verifcode) && (UserRepo.Auth(u.getLogin())!=null )) {
             AddCode(verifcode, UserRepo.Auth(u.getLogin()));
             return "you have been verified";
 
