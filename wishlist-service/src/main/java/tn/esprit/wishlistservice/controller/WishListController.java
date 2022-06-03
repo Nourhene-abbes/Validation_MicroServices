@@ -19,35 +19,40 @@ public class WishListController {
     private WishListServiceImpl wishListService;
 
     @GetMapping("/findAllWishList")
+    @ResponseBody
     public List <WishList> findAll() {
       return  wishListService.findAll();
     }
 
-    @GetMapping("/findWishList")
-    WishList findById(int id) {
+    @GetMapping("/findWishList/{id}")
+    @ResponseBody
+    WishList findById(@PathVariable("id") int id) {
         return wishListService.findById(id);
     }
 
-
     @PostMapping("/create")
+    @ResponseBody
     WishList addWishList(@RequestBody WishList wishList) {
         return wishListService.addWishList(wishList);
     }
 
 
     @PostMapping("/")
+    @ResponseBody
     public WishList addBookToWishList(int idBook, int idwishList) {
         return wishListService.addBookToWishList(idBook, idwishList);
     }
 
     @DeleteMapping("/")
+    @ResponseBody
     public void deleteBookFromBasket(int idwishList, int idBook) {
         wishListService.deleteBookFromWishList(idwishList, idBook);
 
     }
 
     @GetMapping("/allwishlist")
-    public Map<String, List<Object>> getWishLis(int user_id) {
+    @ResponseBody
+    public Map<String, List<Object>> getWishList(int user_id) {
         Map<String, List<Object>> map = new HashMap<>();
 
         List<Object> wishListArrayList = new ArrayList<>();
