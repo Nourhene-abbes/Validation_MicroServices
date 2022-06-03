@@ -1,4 +1,5 @@
 package tn.esprit.wishlistservice.model;
+
 import java.io.Serializable;
 
 public class JwtResponse implements Serializable {

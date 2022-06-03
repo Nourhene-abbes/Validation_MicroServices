@@ -3,11 +3,13 @@
     <output-path>$PROJECT_DIR$/zull-gateway/target</output-path>
     <properties id="maven-jee-properties">
       <options>
+        <exploded>false</exploded>
         <module>zuulServer</module>
         <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="zuulServer-0.0.1-SNAPSHOT.war">
+    <root id="archive" name="getaway-server-0.0.1-SNAPSHOT.war">
       <element id="artifact" artifact-name="zuulServer:war exploded" />
     </root>
   </artifact>

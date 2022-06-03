@@ -1,11 +1,12 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="zuulServer:war exploded">
-    <output-path>$PROJECT_DIR$/zull-gateway/target/zuulServer-0.0.1-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/zull-gateway/target/getaway-server-0.0.1-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
         <module>zuulServer</module>
         <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">
@@ -145,7 +146,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/zull-gateway/target/zuulServer-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/zull-gateway/target/getaway-server-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="zuulServer/web/Web" />
     </root>
