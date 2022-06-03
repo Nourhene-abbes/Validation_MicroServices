@@ -52,8 +52,25 @@ public class Book {
     public Book(int id) {
         this.id = id;
     }
+     
+    
+    
+    public Book(String title, double price, String pubHouse, String summary, Date releaseDate, int quantity,
+			String status, String authors) {
+		super();
+		this.title = title;
+		this.price = price;
+		this.pubHouse = pubHouse;
+		this.summary = summary;
+		this.releaseDate = releaseDate;
+		this.quantity = quantity;
+		this.status = status;
+		Authors = authors;
+	}
 
-    @JsonIgnore
+
+
+	@JsonIgnore
     @ManyToMany(mappedBy = "books")
     private List<WishList> wishLists;
 	public int getId() {
