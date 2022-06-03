@@ -9,12 +9,12 @@
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
         <option value="$PROJECT_DIR$/zull-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/wishlist-service/pom.xml" />
         <option value="$PROJECT_DIR$/book-service/pom.xml" />
+        <option value="$PROJECT_DIR$/category-service/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="jpab" />
   </component>
