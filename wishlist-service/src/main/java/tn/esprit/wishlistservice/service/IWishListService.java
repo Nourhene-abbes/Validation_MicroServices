@@ -15,10 +15,10 @@ public interface IWishListService <T>{
 
     WishList addWishList(WishList wishList);
 
-    //WishList addBookToWishList(int bookId, int wishlistId);
+    WishList addBookToWishList(int bookId, int wishlistId);
 
 
-     //void deleteBookFromWishList(int wishListId, int bookId);
+     void deleteBookFromWishList(int wishListId, int bookId);
 
 
     int countBestBookInWishList(Book bestBook);

@@ -1,5 +1,4 @@
 package tn.esprit.wishlistservice.model;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
