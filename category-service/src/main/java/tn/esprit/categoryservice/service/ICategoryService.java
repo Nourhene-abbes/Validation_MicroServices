@@ -6,7 +6,7 @@ public interface ICategoryService<T> {
 
     List<T> findAll();
 
-    T findByName(String name);
+    List<T> findByName(String name);
 
     T create(T category);
 

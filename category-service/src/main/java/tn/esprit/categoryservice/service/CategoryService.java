@@ -20,7 +20,7 @@ public class CategoryService implements ICategoryService<Category>{
     }
 
     @Override
-    public Category findByName(String name) {
+    public List<Category> findByName(String name) {
         return categoryRepository.findByName(name);
     }
 
