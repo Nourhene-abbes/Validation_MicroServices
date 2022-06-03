@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.getway.server</groupId>
-	<artifactId>zuulServer</artifactId>
+	<artifactId>getaway-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>getway-server</name>
+	<name>getaway-server</name>
 	<description>projet for zuul getway</description>
 
 	<properties>

@@ -1,12 +1,11 @@
 package tn.esprit.bookservice.service;
 
-
 import tn.esprit.bookservice.model.Book;
 
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
-@Service
+
 public interface BookService {
     Book addBook(Book b);
 

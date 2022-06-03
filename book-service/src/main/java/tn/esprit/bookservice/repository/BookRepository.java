@@ -5,8 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import tn.esprit.bookservice.model.Book;
 
-
-
 @Repository("BookRepository")
 public interface BookRepository extends JpaRepository<Book, Integer> {
 
