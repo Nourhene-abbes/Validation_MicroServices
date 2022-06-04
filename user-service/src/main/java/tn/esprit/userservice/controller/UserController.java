@@ -1,6 +1,7 @@
 package tn.esprit.userservice.controller;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +23,10 @@ import tn.esprit.userservice.service.ServiceUser;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin("*")
+@CrossOrigin
 public class UserController {
 
-
+	
     @Autowired
     private ServiceUser srvUsr;
 
@@ -33,16 +34,16 @@ public class UserController {
     /// Sign up user
     @PostMapping("/Signup")
     @ResponseBody
-    public String Adduser( User us) {
-        return srvUsr.Signup(us);
-
+    public String Adduser(@Valid@RequestBody User us) {
+         System.out.println(us.getEmail());
+         return srvUsr.Signup(us);
     }
     /// Sign up user
     @PostMapping("/SignupClient")
     @ResponseBody
-    public String AdduserClient( User us) {
-        return srvUsr.SignupClient(us);
-
+    public String AdduserClient(@Valid@RequestBody User us) {
+    	System.out.println(us.getEmail());
+         return srvUsr.SignupClient(us);
     }
 
     // Get All
@@ -80,7 +81,7 @@ public class UserController {
     //update
     @PutMapping("/modify")
     @ResponseBody
-    public User modifyUser( User user) {
+    public User modifyUser(@Valid@RequestBody User user) {
         return srvUsr.Update(user);
     }
     @DeleteMapping("/suppression/{id}")
@@ -104,18 +105,20 @@ public class UserController {
     }
     @GetMapping("/ChangePassword")
     @ResponseBody
-    public String Change(@RequestParam int number,@RequestParam String password,@RequestParam long id) {
-        String x=srvUsr.UpdateRestPassword(number,password,id);
+    public String Change(@RequestParam int number,@RequestParam String password,@RequestParam String email) {
+        String x=srvUsr.UpdateRestPassword(number,password,email);
         return x;
     }
     @GetMapping("/VerifyAccount")
     @ResponseBody
-    public String verify( User u, @RequestParam String Code) {
+    public String verify( @RequestParam Long id, @RequestParam String Code) {
+    	User u =srvUsr.GetUser(id);
         return srvUsr.VerifyMyaccount(u, Code);
     }
     @GetMapping("/isVerified")
     @ResponseBody
-    public boolean isverify(User u) {
+    public boolean isverify(@RequestParam Long id) {
+    	User u =srvUsr.GetUser(id);
         return srvUsr.isVerified(u.getLogin(),u.getPassword());
     }
     @RequestMapping("/hello")
@@ -123,6 +126,13 @@ public class UserController {
         return "helloworld";
 
     }
+    
+    @GetMapping("/me")
+    public User whoami(@RequestParam String username) {
+
+    	return srvUsr.whoami(username);
+
+    	}
 
 
 }

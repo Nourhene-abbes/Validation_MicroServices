@@ -70,7 +70,8 @@ public class UserSecurityConfiguration extends WebSecurityConfigurerAdapter  {
     	// Disallow everything else..
     	.anyRequest().authenticated();
     	http.apply(new JwtTokenFilterConfigurer(jwtTokenProvider));
-    	
+    	  http.csrf().disable();
+    	    http.headers().frameOptions().disable();
     	
     }
 

@@ -5,6 +5,8 @@ import tn.esprit.userservice.model.User;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface IUserService {
     public User Authority(String login, String password);
     public String Signup(User us);
@@ -24,8 +26,8 @@ public interface IUserService {
     public long SelectByid(String login);
     public void Delete(long id);
     public void ifNotverifiedVerif(long id,String verification_code);
-    public String UpdateRestPassword(int code,String password,long id);
-
+    public String UpdateRestPassword(int code,String password,String email);
+    public User whoami(String username);
     /*
     public String VerifyAccount();
     public Void AddAdmin();

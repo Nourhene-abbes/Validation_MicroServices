@@ -18,62 +18,47 @@ public class WishListController {
     @Autowired
     private WishListServiceImpl wishListService;
 
-    //@Autowired
-    //private OrderItemService orderItemService;
-
-    @Autowired
-    private IOnLineWishList iOnLineWishList;
-
     @GetMapping("/findAllWishList")
+    @ResponseBody
     public List <WishList> findAll() {
       return  wishListService.findAll();
     }
 
-    @GetMapping("/findWishList")
-    WishList findById(int id) {
+    @GetMapping("/findWishList/{id}")
+    @ResponseBody
+    WishList findById(@PathVariable("id") int id) {
         return wishListService.findById(id);
     }
 
-
     @PostMapping("/create")
+    @ResponseBody
     WishList addWishList(@RequestBody WishList wishList) {
         return wishListService.addWishList(wishList);
     }
 
-    /*
+
     @PostMapping("/")
+    @ResponseBody
     public WishList addBookToWishList(int idBook, int idwishList) {
         return wishListService.addBookToWishList(idBook, idwishList);
     }
 
     @DeleteMapping("/")
+    @ResponseBody
     public void deleteBookFromBasket(int idwishList, int idBook) {
         wishListService.deleteBookFromWishList(idwishList, idBook);
 
     }
 
-    @GetMapping("/best")
-    public int countBestBookInWishList() {
-        return wishListService.countBestBookInWishList(orderItemService.getBestBook());
-    }
-    */
-
     @GetMapping("/allwishlist")
-    public Map<String, List<Object>> getWishLis(int user_id) {
+    @ResponseBody
+    public Map<String, List<Object>> getWishList(int user_id) {
         Map<String, List<Object>> map = new HashMap<>();
 
         List<Object> wishListArrayList = new ArrayList<>();
 
         List<WishList> wishLists = wishListService.findAll();
 
-        List<OnLineWishList> onlinewishList = iOnLineWishList.findAll();
-
-        for (OnLineWishList onLineWishList : onlinewishList) {
-
-            if (onLineWishList.getUser().getId() == user_id)
-
-                wishListArrayList.add(onLineWishList);
-        }
         for (WishList wishList : wishLists) {
 
             if (wishList.getUser().getId() == user_id)

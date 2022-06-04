@@ -1,5 +1,4 @@
 package tn.esprit.wishlistservice.model;
-
 import java.util.Set;
 import java.io.Serializable;
 import java.util.Objects;
@@ -24,8 +23,7 @@ private String password;
 private int role;
 private String address;
 private int zipCode;
-@OneToMany(mappedBy = "User")
-private Set<FavoriteCategorie> Fcu;
+
 
 
     public User(String full_name, String email, int telephone, String login, String password, int role, String address,

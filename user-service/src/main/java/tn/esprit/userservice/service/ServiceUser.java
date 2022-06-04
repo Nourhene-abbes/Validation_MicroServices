@@ -16,6 +16,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -234,11 +235,11 @@ public class ServiceUser implements IUserService{
    
 	@Override
     public void sendsms(String str,int body) {
-        Twilio.init("ACc84c5a207336b46ee6d4f2bc6954b86a","5584b31545869ded1498127f2d8ac2c8");
+        Twilio.init("AC509ba02649995416926c5e539167d9f2","061128dd5b0bdba7f92220d1c9eae31f");
         try {
         	 com.twilio.rest.api.v2010.account.Message message = com.twilio.rest.api.v2010.account.Message.creator(
                     new PhoneNumber("+216"+str), // To number
-                    new PhoneNumber("+19378065252"), // From number
+                    new PhoneNumber("+19472253177"), // From number
                     "Verification code to reset password is :"+ body
             ).create();
         	 
@@ -248,6 +249,7 @@ public class ServiceUser implements IUserService{
             // TODO: handle exception
         }
     }
+
 
     @Override
     public User GetUser(long id) {
@@ -296,9 +298,9 @@ public class ServiceUser implements IUserService{
     }
 
     @Override
-    public String UpdateRestPassword(int code, String password, long id) {
+    public String UpdateRestPassword(int code, String password, String email) {
         // TODO Auto-generated method stub
-        User t=UserRepo.findById(id);
+        User t=UserRepo.sms(email);
         if(t==null) {
             return "User not found";
         }
@@ -327,6 +329,14 @@ public class ServiceUser implements IUserService{
         }
         return "Something went wrong";
     }
+
+
+	@Override
+	public User whoami(String username) {
+		// TODO Auto-generated method stub
+		return UserRepo.findByUserName(username);
+				
+	}
 
 
 }

@@ -3,6 +3,7 @@ package tn.esprit.wishlistservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import tn.esprit.wishlistservice.model.Basket;
 import tn.esprit.wishlistservice.model.Book;
 import tn.esprit.wishlistservice.model.WishList;
@@ -17,9 +18,8 @@ public class WishListServiceImpl implements IWishListService<WishList> {
     @Autowired
     WishListRepository wishListRepository;
 
-    //@Autowired
-    //BookRepository bookRepository;
-
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Override
     public List<WishList> findAll() {
@@ -36,11 +36,11 @@ public class WishListServiceImpl implements IWishListService<WishList> {
         return wishListRepository.save(wishList);
     }
 
-    /*
+
     @Override
     public WishList addBookToWishList(int bookId, int wishListId) {
         WishList wishList1 = wishListRepository.findById(wishListId).get();
-        Book book = bookRepository.findById(bookId).get();
+        Book book = restTemplate.getForObject("http://book-service/api/book/getBook/" + bookId, Book.class);
 
         wishList1.getBooks().add(book);
         return wishListRepository.save(wishList1);
@@ -51,7 +51,7 @@ public class WishListServiceImpl implements IWishListService<WishList> {
     public void deleteBookFromWishList(int wishListId, int bookId) {
         try{
             WishList wishList = wishListRepository.findById(wishListId).get();
-            Book book = bookRepository.findById(bookId).get();
+            Book book = restTemplate.getForObject("http://book-service/api/book/getBook/" + bookId, Book.class);
             wishList.getBooks().remove(book);
             wishListRepository.save(wishList);
         }catch(Exception e){
@@ -59,7 +59,6 @@ public class WishListServiceImpl implements IWishListService<WishList> {
         }
 
     }
-    */
 
     @Override
     public int countBestBookInWishList(Book bestBook) {

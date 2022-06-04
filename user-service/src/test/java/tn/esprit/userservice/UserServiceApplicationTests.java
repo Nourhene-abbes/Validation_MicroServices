@@ -1,13 +1,16 @@
 package tn.esprit.userservice;
 
 import org.junit.Test;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserServiceApplicationTests {
+public class UserServiceApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
+		
+		 
 	}
 
 }

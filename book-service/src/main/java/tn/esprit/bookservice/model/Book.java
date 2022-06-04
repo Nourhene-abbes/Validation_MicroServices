@@ -7,10 +7,11 @@ import javax.persistence.*;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
+
 @Getter
 @Setter
-@AllArgsConstructor
+@Data
+@NoArgsConstructor
 @Entity
 @Table(name = "book")
 @ToString
@@ -175,11 +176,6 @@ public class Book {
 		this.nbPage = nbPage;
 		Authors = authors;
 		this.isDiscounted = isDiscounted;
-	}
-
-	public Book() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

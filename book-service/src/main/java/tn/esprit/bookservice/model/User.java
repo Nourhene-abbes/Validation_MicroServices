@@ -9,9 +9,6 @@ import javax.persistence.*;
 @Entity
 public class User implements Serializable {
 
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -24,8 +21,7 @@ private String password;
 private int role;
 private String address;
 private int zipCode;
-@OneToMany(mappedBy = "User")
-private Set<FavoriteCategorie> Fcu;
+
 
 
     public User(String full_name, String email, int telephone, String login, String password, int role, String address,
