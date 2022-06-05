@@ -33,7 +33,7 @@ public class Book {
 
     private String status;
     @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
+    @JoinColumn(name = "category_id", nullable = true)
     private Category category;
 
     private String image;
@@ -55,6 +55,7 @@ public class Book {
     @JsonIgnore
     @ManyToMany(mappedBy = "books")
     private List<WishList> wishLists;
+
 	public int getId() {
 		return id;
 	}
@@ -159,9 +160,10 @@ public class Book {
 		this.isDiscounted = isDiscounted;
 	}
 
-	public Book(String title, double price, String pubHouse, String summary, Date releaseDate, int quantity,
+	public Book(int id, String title, double price, String pubHouse, String summary, Date releaseDate, int quantity,
 			String status, Category category, String image, int nbPage, String authors, boolean isDiscounted) {
 		super();
+		this.id = id;
 		this.title = title;
 		this.price = price;
 		this.pubHouse = pubHouse;

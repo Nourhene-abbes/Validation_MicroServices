@@ -67,6 +67,7 @@ public class UserController {
         }
         return list;
     }
+
     // Login
     @PostMapping("/signin")
     public String login(@Valid@RequestBody JwtRequest loginRequest) {
@@ -90,7 +91,7 @@ public class UserController {
         return "User Deleted successfully !";
     }
     //Get user infos
-    @GetMapping("/informationUser/{id}")
+    @GetMapping("c")
     @ResponseBody
     public User userInfo( @PathVariable("id") long id) {
         return srvUsr.GetUser(id);

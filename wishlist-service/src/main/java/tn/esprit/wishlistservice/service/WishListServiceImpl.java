@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import tn.esprit.wishlistservice.model.Basket;
 import tn.esprit.wishlistservice.model.Book;
+import tn.esprit.wishlistservice.model.User;
 import tn.esprit.wishlistservice.model.WishList;
 import tn.esprit.wishlistservice.repository.WishListRepository;
 
@@ -33,6 +34,9 @@ public class WishListServiceImpl implements IWishListService<WishList> {
 
     @Override
     public WishList addWishList(WishList wishList) {
+        User user = restTemplate.getForObject("http://user-service/users/informationUser/" + wishList.getUser().getId(), User.class);
+
+        wishList.setUser(user);
         return wishListRepository.save(wishList);
     }
 
@@ -52,7 +56,8 @@ public class WishListServiceImpl implements IWishListService<WishList> {
         try{
             WishList wishList = wishListRepository.findById(wishListId).get();
             Book book = restTemplate.getForObject("http://book-service/api/book/getBook/" + bookId, Book.class);
-            wishList.getBooks().remove(book);
+            book = wishListRepository.getBookById(bookId);
+           wishList.getBooks().remove(book);
             wishListRepository.save(wishList);
         }catch(Exception e){
             e.printStackTrace();

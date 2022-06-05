@@ -5,10 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c94dac19-4868-4a54-958b-12981b3593fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/controller/WishListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/controller/WishListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket-service/wishlist-service (1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket-service/wishlist-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/tn/esprit/bookservice/BookServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/tn/esprit/bookservice/BookServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/tn/esprit/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/tn/esprit/bookservice/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/tn/esprit/bookservice/service/BookServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/tn/esprit/bookservice/service/BookServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/tn/esprit/categoryservice/CategoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/tn/esprit/categoryservice/CategoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/tn/esprit/categoryservice/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/tn/esprit/categoryservice/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/tn/esprit/categoryservice/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/tn/esprit/categoryservice/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/test/java/tn/esprit/categoryservice/CategoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/test/java/tn/esprit/categoryservice/CategoryServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/wishlist-service (3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-book-service/wishlist-service (4).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/wishlist-service (5).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/tn/esprit/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/tn/esprit/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/tn/esprit/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/tn/esprit/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/WishlistServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/WishlistServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/model/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/repository/WishListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/repository/WishListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/service/WishListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/src/main/java/tn/esprit/wishlistservice/service/WishListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wishlist-service/target/classes/tn/esprit/wishlistservice/controller/WishListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/target/classes/tn/esprit/wishlistservice/controller/WishListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist-service/target/classes/tn/esprit/wishlistservice/service/WishListServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist-service/target/classes/tn/esprit/wishlistservice/service/WishListServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +63,13 @@
       </map>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="29yWyvZJuTCKgtWgHBRhb8DVQkA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,15 +81,17 @@
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/book-service/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/category-service/pom.xml" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -65,8 +103,8 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn install" />
       <command value="mvn clean" />
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -127,43 +165,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasketServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="wishlist-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.basketservice.BasketServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BookServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="book-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.bookservice.BookServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscoveryServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="category-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.categoryservice.CategoryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="discovery-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.discoveryserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.discoveryserver.DiscoveryServerApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="discovery-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.discoveryserver.DiscoveryServerApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Amazon Corretto/jdk11.0.13_8" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetwayServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="getaway-server" />
+    <configuration name="GetwayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zuulServer" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.esprit.getway.communication.*" />
@@ -171,16 +201,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.esprit.getway.communication.GetwayServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetwayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="zuulServer" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.esprit.getway.communication.GetwayServerApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,20 +223,19 @@
       <item itemvalue="Application.GetwayServerApplication" />
       <item itemvalue="Application.WishlistServiceApplication" />
       <item itemvalue="Application.BookServiceApplication" />
-      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
-      <item itemvalue="Spring Boot.DiscoveryServerApplication (1)" />
-      <item itemvalue="Spring Boot.BookServiceApplication" />
-      <item itemvalue="Spring Boot.GetwayServerApplication" />
-      <item itemvalue="Spring Boot.BasketServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
-      <item itemvalue="Spring Boot.GetwayServerApplication (1)" />
       <item itemvalue="Spring Boot.WishlistServiceApplication" />
+      <item itemvalue="Spring Boot.CategoryServiceApplication" />
+      <item itemvalue="Spring Boot.BookServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      <item itemvalue="Spring Boot.GetwayServerApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.GetwayServerApplication" />
+        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="Application.BookServiceApplication" />
         <item itemvalue="Application.WishlistServiceApplication" />
-        <item itemvalue="Spring Boot.GetwayServerApplication (1)" />
         <item itemvalue="Application.GetwayServerApplication" />
       </list>
     </recent_temporary>
@@ -248,6 +267,7 @@
       <workItem from="1654275450853" duration="19000" />
       <workItem from="1654275520132" duration="7507000" />
       <workItem from="1654283205767" duration="3827000" />
+      <workItem from="1654426296156" duration="7134000" />
     </task>
     <servers />
   </component>

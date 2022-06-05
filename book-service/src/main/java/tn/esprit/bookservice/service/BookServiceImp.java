@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import org.springframework.web.client.RestTemplate;
 import tn.esprit.bookservice.model.Book;
+import tn.esprit.bookservice.model.Category;
 import tn.esprit.bookservice.repository.BookRepository;
 
 import java.util.ArrayList;
@@ -16,10 +18,14 @@ public class BookServiceImp implements BookService {
 
     @Autowired
     BookRepository bookRepository;
-    
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Override
     public Book addBook(Book b) {
+        Category category = restTemplate.getForObject("http://category-service/category/" + b.getCategory().getId(), Category.class);
+        b.setCategory(category);
         Book res = bookRepository.save(b);
         return res;
     }

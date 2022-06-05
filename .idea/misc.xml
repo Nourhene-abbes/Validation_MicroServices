@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/zull-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/wishlist-service/pom.xml" />
         <option value="$PROJECT_DIR$/book-service/pom.xml" />
+        <option value="$PROJECT_DIR$/category-service/pom.xml" />
       </list>
     </option>
   </component>

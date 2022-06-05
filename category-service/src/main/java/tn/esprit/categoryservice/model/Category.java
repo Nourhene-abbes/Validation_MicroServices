@@ -3,7 +3,7 @@ package tn.esprit.categoryservice.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.Set;
+
 
 @Entity
 public class Category implements Serializable {
@@ -15,8 +15,6 @@ public class Category implements Serializable {
 
     @Column
     private String name;
-    @OneToMany(mappedBy = "Category")
-    private Set<FavoriteCategorie> Fcc;
  
     public Category() {
     }
