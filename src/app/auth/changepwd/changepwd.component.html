@@ -1,0 +1,83 @@
+<!-- <div class="login-box">
+    <div class="login-logo">
+      <a href="/"><b>Book</b>Store</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Here you can set a new password for </p>
+  
+       
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+          
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button type="submit"  class="btn btn-primary btn-block">update new password</button>
+            </div>
+
+          </div>
+   
+  
+        <p class="mt-3 mb-1">
+          <a href="/login">Login</a>
+        </p>
+        <p class="mb-0">
+          <a href="/register" class="text-center">Register a new membership</a>
+        </p>
+      </div>
+  
+    </div>
+  </div>
+
+  
+
+  <script src="/public/plugins/jquery/jquery.min.js"></script>
+
+  <script src="/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="/public/dist/js/adminlte.min.js"></script>
+   -->
+
+   <div class="page-holder align-items-center py-4 bg-gray-100 vh-100">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- register -->
+         <div class="col-lg-6 px-lg-4">
+          <div class="card">
+            <div class="card-header px-lg-5">
+              <div class="card-heading text-primary">BookStore</div>
+            </div>
+            <div class="card-body p-lg-5">
+              <h3 class="mb-4">Reset Password</h3>
+              <p class="text-muted text-sm mb-5">“Here you can set a new password.”</p>
+              
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="fullname" [(ngModel)]="password" type="password" placeholder="password" required>
+                  <label for="fullname">Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="fullname" [(ngModel)]="code" type="text" placeholder="code" required>
+                  <label for="code">SMS Code</label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary" id="regidter" type="button" name="registerSubmit" (click)="reset()">Reset</button>
+                </div>
+          
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-5 ms-xl-auto px-lg-4 text-center text-primary"><img class="img-fluid mb-4" width="300" src="https://therichpost.com/wp-content/uploads/2021/06/login_page_image.png" alt="" style="transform: rotate(10deg)">
+          <h1 class="mb-4">BookStore.com <br class="d-none d-lg-inline">Read For Free.</h1>
+          <p class="lead text-muted">“You can never get a cup of tea large enough or a book long enough to suit me.”</p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,190 @@
+<!-- <i class="ti-shopping-cart"></i> <span style="position: relative;left: 1px;" class="number"></span>
+
+
+<div class="page-banner-section section">
+    <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+  
+   
+        <div class="col-lg-4 col-12 order-lg-2 d-flex align-items-center justify-content-center">
+            <div class="page-banner">
+                <h1>Profile</h1>
+                <p></p>
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/updateprofile">PROFILE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+ 
+     
+    </div>
+  </div>
+  
+  <div class="register-section section mt-90 mb-90">
+    <div class="container">
+        <div class="row">
+  
+            <div class="col-md-6 col-12 d-flex">
+                <div class="ee-register">
+  
+                    <h3>Your Profile</h3>
+                    <p>E&amp;This Section is based to update your profile information of your acount</p>
+  
+                  
+                        <div class="row">
+                            <div class="col-12 mb-30"><input type="text" name="full_name" placeholder="Enter Full Name" value="{{profile.full_name}}" ></div>
+                            <div class="col-12 mb-30"><input type="email" name="email" readonly placeholder="Your Email here"value="{{profile.email}}" ></div>
+                            <div class="col-12 mb-30"><input type="text" name="telephone" placeholder="Enter Phone" value="{{profile.telephone}}" ></div>
+                            <div class="col-12 mb-30"><input type="text" name="login"  placeholder="Your Login here" value="{{profile.login}}"></div>
+                            <div class="col-12 mb-30"><input type="text" name="address" placeholder="Enter Address"value="{{profile.address}}"></div>
+                            <div class="col-12 mb-30"><input type="text" name="zipcode" placeholder="Enter ZipCode"value="{{profile.zipCode}}"></div>
+                            <div class="col-12 mb-30"><input type="password" name="password" placeholder="Enter New Password"value="{{profile.password}}"></div>
+                            <div class="col-12"><input type="submit" value="Update" (click)="updateProfile()"></div>
+                        </div>
+                
+  
+                </div>
+            </div>
+  
+            </div>
+  
+        </div>
+    </div>
+  -->
+
+
+
+<app-home></app-home>
+<br><br><br>
+  <div class="container bootstrap snippets bootdey">
+    <div class="panel-body inf-content">
+        <div class="row">
+            <div class="col-md-4">
+                <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario"> 
+                <ul title="Ratings" class="list-inline ratings text-center">
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <strong>Profile Information</strong><br><br>
+                <div class="table-responsive">
+                <table class="table table-user-information">
+                    <tbody>
+                        <tr>    
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                    Fullname                                                
+                                </strong>
+                            </td>
+                            <td >
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="fullname" value="{{profile.full_name}}" [(ngModel)]="full_name" type="text" placeholder="Fullname" required>
+                                    <label for="fullname">FullName</label>
+                                  </div>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-cloud text-primary"></span>  
+                                    Username                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="login" value="{{profile.login}}" [(ngModel)]="login" type="text" placeholder="UserName" required>
+                                    <label for="fullname">Username</label>
+                                  </div>
+                            </td>
+                        </tr>
+    
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-bookmark text-primary"></span> 
+                                    Email                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="fullname"value="{{profile.email}}" [(ngModel)]="email" type="email" placeholder="Email" required>
+                                    <label for="fullname">Email</label>
+                                  </div>
+                            </td>
+                        </tr>
+    
+    
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                    Telephone                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="fullname"value="{{profile.telephone}}" [(ngModel)]="telephone" type="tel" placeholder="Telephone" required>
+                                    <label for="fullname">Telephone</label>
+                                  </div>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                    Address                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="address"value="{{profile.address}}" [(ngModel)]="address" type="text" placeholder="Address" required>
+                                    <label for="address">Address</label>
+                                  </div>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                    ZipCode                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="zipCode"value="{{profile.zipCode}}" [(ngModel)]="zipCode" type="text" placeholder="ZipCode" required>
+                                    <label for="zipcode">ZipCode</label>
+                                  </div>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                    Password                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="password"value="{{profile.password}}" [(ngModel)]="password" type="password" placeholder="password" required>
+                                    <label for="fullname">Password</label>
+                                  </div>
+                            </td>
+                        </tr>                                    
+                    </tbody>
+                </table>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="regidter" type="button" (click)="updateProfile()" name="registerSubmit" >Update</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>                                        
